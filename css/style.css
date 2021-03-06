@@ -1,0 +1,133 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+}
+section{
+    width: 100%;
+    position: relative;
+    min-height: 250px;
+}
+section img{
+    width: 100%;
+    min-height: 250px;
+    position: absolute;
+    z-index: -1;
+}
+.dashboard{
+    position: absolute;
+    top: 0;
+    padding: 2em;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    z-index: 999;
+}
+.dashboard h1{
+    color: white;
+}
+.input-eria{
+    width: 650px;
+    max-width: 90%;
+    display: flex;
+    align-items: center;
+}
+.input-eria input[type='text']{
+    padding: 1em 2em; 
+    width: 90%;   
+    font-size: 18px;
+    border-radius: 20px 0 0 20px;
+    border: none;
+    outline: none;
+    margin: 2em 0;
+}
+#search{
+    width: 65px;
+    height: 58px;
+    background: black;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    align-items: center; 
+    justify-content: center;   
+    cursor: pointer;
+}
+#mapid{
+    height: calc(100vh - 250px);
+    cursor: pointer;
+}
+.details{
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em;
+    border-radius: 10px;
+}
+.details span{
+    padding: 1em 5em 1em 2em;
+    text-align: justify;
+    position: relative;
+}
+.details span:not(:last-child)::after{
+    content: '';
+    width: 1px;
+    height: 60%;
+    background-color: lightgray;
+    position: absolute;
+    right: 0;
+    top: 30%;
+}
+h6{
+    color: hsl(0, 0%, 59%);
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+h3, h3 span{
+    color: hsl(0, 0%, 17%);
+    font-weight: 500;
+    font-size: 20px;
+    text-align:left;
+}
+#region, #city{
+    display: inline;
+}
+
+@media only screen and (max-width: 1026px){
+    .details span{
+        padding: 1em 2em;
+        width: 50%;
+    } 
+    .details span:nth-child(even)::after{
+        display: none;
+    }
+    #region, #city #geoName{
+        display: inline-block;
+    }
+}
+@media only screen and (max-width: 500px){
+    .details span{
+        padding: 0.5em 0;
+        width: 100%;        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    } 
+    .details span::after{
+        display: none;
+    }
+
+    h6{
+        margin-bottom: 0.2em;
+    }
+
+    
+}
+
+
+
